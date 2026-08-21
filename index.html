@@ -34,6 +34,83 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <link href="assets/css/cco.css" rel="stylesheet">
+
+  <style type="text/css">
+    #venue {
+      padding: 60px 0;
+    }
+    
+    #venue .container-fluid {
+      margin-bottom: 3px;
+    }
+    
+    #venue .venue-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+    }
+    
+    #venue .venue-info {
+      background: url("assets/img/venue-info-bg.jpg") top center no-repeat;
+      background-size: cover;
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    
+    #venue .venue-info:before {
+      content: "";
+      background: rgba(13, 20, 41, 0.8);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    #venue .venue-info h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #fff;
+    }
+    
+    @media (max-width: 574px) {
+      #venue .venue-info h3 {
+        font-size: 24px;
+      }
+    }
+    
+    #venue .venue-info p {
+      color: #fff;
+      margin-bottom: 0;
+    }
+    
+    #venue .venue-gallery-container {
+      padding-right: 12px;
+    }
+    
+    #venue .venue-gallery {
+      overflow: hidden;
+      border-right: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+    }
+    
+    #venue .venue-gallery img {
+      transition: all ease-in-out 0.4s;
+    }
+    
+    #venue .venue-gallery:hover img {
+      transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 767px) {
+      .hommage img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+      }
+    }
+  </style>
   
 </head>
 
@@ -68,10 +145,15 @@
           <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
           <li><a class="nav-link scrollto" href="#about">À propos</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Programme</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Équipe</a></li>
+          <li><a class="nav-link scrollto" href="#venue">Hommage</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Frais</a></li>
+          <li><a class="nav-link scrollto " href="#sponsors">Sponsors</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
+
+
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -82,7 +164,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <h1><!--Congrès -->Club des <span>cardiologues</span> de l'ouest</h1>
-      <h2>La cardiologie au centre de la santé publique, <b class="text-animation" data-aos-delay="100">20ème congrés International</b>.</h2>
+      <h2>La cardiologie au centre de la santé publique, <b class="text-animation" data-aos-delay="100">21ème congrés International</b>.</h2>
       <div class="d-flex">
         <a href="javascript:;" class="btn-get-started scrollto" data-toggle="modal" data-target="#inscriptionModal">S'inscrire au congrés</a>
         <a href="#schedule" class="btn-watch-video"><i class="bi bi-play-circle"></i><span>Programme</span></a>
@@ -141,7 +223,7 @@
         <div class="section-title">
           <h2>À propos</h2>
           <h3>Plus d'infos sur le <span>Congrés</span></h3>
-          <p>20ème congrés international du Club des cardiologues de l'ouest, 30 Novembre et 1 Décembre 2023 à l'Hôtel Oran Bay.</p>
+          <p>21ème congrés international du Club des cardiologues de l'ouest, 28 et 29 novembre 2024 à l'Hôtel AZ grand Oran.</p>
         </div>
 
         <div class="row">
@@ -157,14 +239,14 @@
               <li>
                 <i class="bx bx-calendar"></i>
                 <div>
-                  <h5>Jeudi 30 Novembre 2023</h5>
+                  <h5>Jeudi 28 Novembre 2024</h5>
                   <p>La première journée promet une expérience enrichissante, avec un accueil chaleureux suivi de trois sessions de conférences captivantes. Vous aurez l'occasion de faire une pause café, de visiter les stands innovants, de participer à un symposium informatif, et de clôturer la journée en beauté avec un Dîner Gala inoubliable.</p>
                 </div>
               </li>
               <li>
                 <i class="bx bxs-calendar"></i>
                 <div>
-                  <h5>Vendredi 01 Décembre 2023</h5>
+                  <h5>Vendredi 29 Décembre 2024</h5>
                   <p>La deuxième journée du congrès est chargée de connaissances, avec six sessions de conférences passionnantes. Prenez une pause café et explorez les stands, assistez à trois symposiums informatifs, savourez un déjeuner convivial, et assistez à la clôture de cet événement enrichissant</p>
                 </div>
               </li>
@@ -184,7 +266,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bx bxs-microphone"></i>
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
               <p>Conférences</p>
             </div>
           </div>
@@ -192,7 +274,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
               <p>Symposiums</p>
             </div>
           </div>
@@ -241,7 +323,7 @@
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="partenaires/AMCV.png" class="img-fluid" alt="">
+            <img src="partenaires/ACVP.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -260,245 +342,237 @@
         <div class="section-title">
           <h2>Programme</h2>
           <h3>Programme détaillé du <span>Congrès</span></h3><br>
-          <!--p>Veuillez trouver ici les détails du programme ainsi les horaire des sessions et des activités.programme.pdf</p-->
+          <p>Ce programme n'est pas le programme définitif du congrès, il sera modifié au fur et à mesure</p>
         </div>
 
         <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Jeudi 30/11/2023</a>
+            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Jeudi 28/11/2024</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Vendredi 01/12/2023</a>
+            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Vendredi 29/11/2024</a>
           </li>
         </ul>
 
-        <h3 class="sub-heading">Le congrès dure 2 jours, il commence le jeudi 30 novembre à 14h et prend fin le 1er décembre à 16h. Il se tiendra à l'<a href="https://www.google.com/maps/place/Hotel+Oran+Bay+Managed+By+Accor/@35.7154028,-0.6144337,17z/data=!3m1!4b1!4m13!1m2!2m1!1soran+bay+hotel!3m9!1s0xd7e89bae0d85b41:0xe216ef2ce83650ce!5m2!4m1!1i2!8m2!3d35.7153985!4d-0.6095628!15sCg5vcmFuIGJheSBob3RlbFoQIg5vcmFuIGJheSBob3RlbJIBBWhvdGVsmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU0xT1hKRU1qZDNSUkFC4AEA!16s%2Fg%2F11pwydq5nv?entry=ttu" target="_blank">hôtel Oran Bay</a>.</h3>
+        <h3 class="sub-heading">Le congrès dure 2 jours, il commence le jeudi 28 novembre à 14h et prend fin le 29 novembre à 16h. Il se tiendra à l'<a href="https://www.google.com/maps/place/Hotel+Oran+Bay+Managed+By+Accor/@35.7154028,-0.6144337,17z/data=!3m1!4b1!4m13!1m2!2m1!1soran+bay+hotel!3m9!1s0xd7e89bae0d85b41:0xe216ef2ce83650ce!5m2!4m1!1i2!8m2!3d35.7153985!4d-0.6095628!15sCg5vcmFuIGJheSBob3RlbFoQIg5vcmFuIGJheSBob3RlbJIBBWhvdGVsmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU0xT1hKRU1qZDNSUkFC4AEA!16s%2Fg%2F11pwydq5nv?entry=ttu" target="_blank">hôtel AZ grand Oran</a>.</h3>
 
-        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <!--div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-          <!-- Programme Day 1 -->
+          <Programme Day 1>
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>14h00</time></div>
+              <div class="col-md-2"><time>13h30</time></div>
               <div class="col-md-10">
                 <h4>Accueil des participants</h4>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>14h30</time></div>
+              <div class="col-md-2"><time>14h00</time></div>
               <div class="col-md-10">
-                <h4>SESSION CARDIOPATHIES CONGENITALES</h4>
-                <p>1- Du prénatal au Postnatal: Naviguer avec les Ultrasons.
-                  <span class="align-right">Dr Kara M / BEKKAR</span>
+                <h4>SESSION COEUR CONGENITAL</h4>
+                <p><u>Modérateurs</u>: <b>Pr BENATTA / Dr ABBOU / Dr SENISNA / Dr BENMANSOUR</b></p>
+                <p>1- Pas à pas échographique dans la maladie de Fallot.
+                  <span class="align-right">Pr M.BEKKAR</span>
                 </p>
-                <p>2- Place de l'Imagerie de Coupe.
-                  <span class="align-right">Dr Derriche H</span>
+                <p>2- Place de l’Imagerie de Coupes dans la maladie de Fallot.
+                  <span class="align-right">Dr H. DERRICHE</span>
                 </p>
-                <p>3- Cathétérisme interventionnel en cardiologie pediatrique.
-                  <span class="align-right">Dr Senoussaoui</span>
+                <p>3- Algorithme de prise en charge dans la maladie de Fallot.
+                  <span class="align-right">Dr S.KARA</span>
+                </p>
+                <p>4- Les grands principes chirurgicaux du Fallot.
+                  <span class="align-right">Dr DJELLOULI</span>
+                </p>
+                <p>5- Les problématiques du Fallot Adulte.
+                  <span class="align-right">Dr M. KARA</span>
+                </p>
+                <p>6- Cardiologie Interventionnelle dans les obstacles droits.
+                  <span class="align-right">Dr R. SENOUSSAOUI</span>
                 </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>15h00</time></div>
+              <div class="col-md-2"><time>14h30</time></div>
               <div class="col-md-10">
                 <h4>SESSION CARDIOLOGIE DU SPORT</h4>
-                <p>1- Communication.
-                  <span class="align-right">Dr Mahdhaoui</span>
+                <p><u>Modérateurs</u>: <b>Dr SARI CHABANE / Pr MAHDHAOUI / Dr C. BENABDALLAH / Pr M. GHANNEM</b></p>
+                <p>1- HTA du sportif : Risque et gestion du traitement.
+                  <span class="align-right">Pr Mahdhaoui</span>
                 </p>
-                <p>2- Communication.
-                  <span class="align-right">Dr Benabdallah</span>
+                <p>2- L'ACFA et sport.
+                  <span class="align-right">Pr F G. IVANES</span>
                 </p>
-                <p>3- Communication.
-                  <span class="align-right"></span>
+                <p>3- Les calcifications coronaires du sportif
+                  <span class="align-right">Pr N. ENDJAH</span>
                 </p>
-                <p>4- Quel Traitement pour le Sportif Hypertendu.
-                  <span class="align-right">Dr NIMA ENJAH</span>
+                <p>4- Les troubles du rythme ventriculaire chez le sportif
+                  <span class="align-right">Pr M. TAHMI</span>
+                </p>
+                <p>5- Quizz ECG
+                  <span class="align-right">Dr C. BENABDALLAH</span>
                 </p>
               </div>
             </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>15h30</time></div>
+              <div class="col-md-10">
+                <h4>SYMPOSIUM SANOFI - VACCINATION & insuffisance cardiaque<span class="align-right">Pr C.BOUKERCHE</span></h4>
+              </div>
+            </div>
+
+
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>15h50</time></div>
               <div class="col-md-10">
-                <h4>PAUSE-CAFE / VISITE DES STANDS</h4>
+                <h4>PAUSE-CAFÉ / Visite des Stands</h4>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>16h10</time></div>
+              <div class="col-md-2"><time>16h00</time></div>
               <div class="col-md-10">
                 <h4>OUVERTURE DU CONGRES</h4>
-                <p>Dr MOHAMMEDI / Pr KICHOU / Pr ABDESSLEM / Pr GHANNEM.
+                <p>Dr B.MOHAMMEDI /Dr N. KARA MOSTEFA /Pr B.KICHOU/Pr M.GHANNEM.
                 </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>16h30</time></div>
+              <div class="col-md-2"><time>17h00</time></div>
               <div class="col-md-10">
-                <h4>SESSION Coeur ET DIABET</h4>
+                <h4>SESSION COEUR ET DIABETE</h4>
+                <p><u>Modérateurs</u>: <b>Pr S.ARIBI/ Dr I.BENOSMAN/ Dr M.MOUALEK/Dr L. BENDAOUD</b></p>
                 <p>1- Apport du Coro scanner dans la stratification du risque cardiovasculaire chez le diabétique.
                   <span class="align-right">Dr SENOUSSAOUI</span>
                 </p>
-                <p>2- L'évaluation du patient diabétique, au-delà du risque Athéroscéreux.
-                  <span class="align-right">Dr DAIB</span>
+                <p>2- La Cardiomyopathie diabétique.
+                  <span class="align-right">Dr L. CHETTIBI</span>
                 </p>
-                <p>3- Le Syndrome Cardio-Rénal: Evidences et Prise en Charge.
-                  <span class="align-right">Dr HADHOUM</span>
+                <p>
+                <p>3- La revascularisation chez le patient diabétique.
+                  <span class="align-right">Pr T. ELLOUZE</span>
                 </p>
-                <p>4- La revascularisation chez lz patient diabétique.
-                  <span class="align-right">Dr BENAMEUR</span>
+                <p>4- Sédentarité: un facteur de risque méconnu.
+                  <span class="align-right">Pr GHANNEM</span>
                 </p>
                 <p>5- Comment je traite le Patient Diabétique en 2023.
-                  <span class="align-right">Dr AMMANI</span>
-                </p>
-                <p>6- Sédentarité un facteur de risque méconnu.
-                  <span class="align-right">Dr GHANNEM</span>
-                </p>
+                  <span class="align-right">Pr AMMANI</span>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>18h00</time></div>
+              <div class="col-md-2"><time>18h30</time></div>
               <div class="col-md-10">
-                <h4>SYMPOSIUM SANOFI</h4>
+                <h4>SYMPOSIUM SANOFI - HTA ET DIABETE<span class="align-right">Pr N. LAREDJ</span></h4>
+                  
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>19h00</time></div>
+              <div class="col-md-2"><time>21h00</time></div>
               <div class="col-md-10">
                 <h4>DINER GALA</h4>
               </div>
             </div>
           </div>
-          <!-- End Programme Day 1 -->
+          <End Programme Day 1>
 
-          <!-- Programme Day 2 -->
+          <Programme Day 2>
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>08h30</time></div>
               <div class="col-md-10">
                 <h4>SESSION HYPERTENSION ARTÉRIELLE</h4>
+                <p><u>Modérateurs</u>: <b>Dr B.MOHAMMEDI / Pr R.BALI / Pr TRIKI / Dr D.NASRI</b></p>
+
                 <p>1- Les nouveautés sur L'HTA.
-                  <span class="align-right">Pr BLANCHARD</span>
+                  <span class="align-right">Pr J. BLACHER</span>
                 </p>
-                <p>2- Faut-il traiter la pressions diastolique, quand et comment.
+                <p>2- Faut-il traiter la pressions diastolique, quand et comment ?
                   <span class="align-right">Pr J.J MOURAD</span>
                 </p>
+                <p>3- Le Syndrome Cardio-Rénal : Évidences et Prise en Charge
+                  <span class="align-right">Pr F.HADDOUM</span>
+                </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10h30</time></div>
+              <div class="col-md-2"><time>9h15</time></div>
               <div class="col-md-10">
-                <h4>SYMPOSIUM SERVIER</h4>
+                <h4>SYMPOSIUM SERVIER<span class="align-right">Pr JJ MOURAD</span></h4>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10h50</time></div>
+              <div class="col-md-2"><time>09h45</time></div>
               <div class="col-md-10">
                 <h4>SESSION INSUFFISANCE CARDIAQUE I</h4>
-                <p>1- Evaluation Hémodynamique de l'I Cardiaque.
+                <p><u>Modérateurs</u>: <b>Pr A. MEZIANE / Pr N.LAREDJ / Pr M.CHETTIBI </b></p>
+                <p>1- Évaluation Hémodynamique de l’Insuffisance Cardiaque.
                   <span class="align-right">Pr S ABDESSELEM</span>
                 </p>
-                <p>2- Les facteurs pronostics dans l'insuffisance cardiaque.
-                  <span class="align-right">Dr MOUQUET</span>
-                </p>
-                <p>3- Quoi de neuf dans HFpEF.
-                  <span class="align-right">Pr N HAMMOUDI</span>
-                </p>
-                <p>4- Apport de L'IRM dans les cardiomyopathies.
+                <p>2- L'IRM dans les cardiomyopathies.
                   <span class="align-right">Pr A ZIDI</span>
+                </p>
+                <p>3- Évaluation de la Cardiomyopathie Ischémique.
+                  <span class="align-right">Dr DAIB</span>
+                </p>
+                <p>4- Quoi de neuf dans HFpEF
+                  <span class="align-right">Pr HAMMOUDI</span>
                 </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10h50</time></div>
+              <div class="col-md-2"><time>10h45</time></div>
+              <div class="col-md-10">
+                <h4>SYMPOSIUM FRATER / DYSLIPIDEMIE<span class="align-right">Pr B KICHOU</span></h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11h10</time></div>
               <div class="col-md-10">
                 <h4>PAUSE-CAFÉ et Visite des Stands</h4>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>12h15</time></div>
-              <div class="col-md-10">
-                <h4>SYMPOSIUM VACCINATION ET INSUFFISANCE CARDIAQUE</h4>
-                  <span class="align-right">Pr NIBOUCHE</span>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12h45</time></div>
+              <div class="col-md-2"><time>11h30</time></div>
               <div class="col-md-10">
                 <h4>SESSION INSUFFISANCE CARDIAQUE II</h4>
-                <p>1- Évaluation de mécanique contractile dans l'insuffisance cardiaque.
-                  <span class="align-right">Dr DAIB</span>
+                <p><u>Modérateurs</u>: <b>Pr M.GHANNEM / Pr S.ABDESSELEM / Pr B. KICHOU / Dr R. TAZDAIT</b></p>
+                <p>1- La rythmologie interventionnelle dans l’Insuffisance Cardiaque.
+                  <span class="align-right">Pr JC. DEHARO</span>
                 </p>
-                <p>2- La place de la rythmologie Interventionnelle dans l'Insuffisance Cardiaque.
-                  <span class="align-right">Pr JC DEHARO</span>
+                <p>2- Nouvelles thérapeutiques dans l'insuffisance cardiaque.
+                  <span class="align-right">Pr TRIKI</span>
                 </p>
-                <p>3- Nouvelles thérapeutiques dans l'insuffisance cardiaque.
-                  <span class="align-right">Pr MOUQUET</span>
+                <p>3- Etude en IRM de la Viabilité et de l’Ischémie.
+                  <span class="align-right">Dr A. KARA Mostefa</span>
+                </p>
+                <p>4- Infarctus du Myocarde de la Femme.
+                  <span class="align-right">Pr M. BENAMEUR</span>
                 </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>12h55</time></div>
+              <div class="col-md-2"><time>12h30</time></div>
               <div class="col-md-10">
-                <h4>SYMPOSIUM AOD</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>13h05</time></div>
-              <div class="col-md-10">
-                <h4>SYMPOSIUM SANOFI</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>13h15</time></div>
-              <div class="col-md-10">
-                <h4>LUNCH BOX</h4>
+                <h4>SYMPOSIUM BIOPHARM ADO<span class="align-right">Pr J C. DEHARO</span></h4>
               </div>
             </div>
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>13h30</time></div>
-              <div class="col-md-10">
-                <h4>SESSION CHALENGING CASE</h4>
-                <p>1- Cas clinique CHU Oran.
-                  <span class="align-right">5 Mn</span>
-                </p>
-                <p>2- Cas clinique EHU Orane.
-                  <span class="align-right">5 Mn</span>
-                </p>
-                <p>3- Cas clinique HMRU Oran.
-                  <span class="align-right">5 Mn</span>
-                </p>
-                <p>4- Cas clinique CHU Tlemcen.
-                  <span class="align-right">5 Mn</span>
-                </p>
-                <p>5- Cas clinique CHU Sidi Belabbès.
-                  <span class="align-right">5 Mn</span>
-                </p>
-                <p>6- Cas clinique EHP C-Vx Privé Kara.
-                  <span class="align-right">5 Mn</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>14h00</time></div>
               <div class="col-md-10">
                 <h4>DEJEUNER</h4>
               </div>
@@ -507,7 +581,34 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>14h30</time></div>
               <div class="col-md-10">
-                <h4>SESSION CARDIOPATHIES CONGENITALES</h4>
+                <h4>EVALUATION DES POSTERS AFFICHES</h4>
+                <p>Pr LAREDJ / Dr BOUDOUINA / Pr BALI / Pr BENATTA</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>15h00</time></div>
+              <div class="col-md-10">
+                <h4>SESSION CHALENGING CASE</h4>
+                <p> Pr LAREDJ / Pr TRIKI / PR SOUFI / Pr GHANEM / Pr HAMMOUDI
+                </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>15h30</time></div>
+              <div class="col-md-10">
+                <h4>PAUSE-CAFÉ</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>16h00</time></div>
+              <div class="col-md-10">
+                <h4>SESSION MALADIE CORONAIRE</h4>
+                <p><u>Modérateurs</u>: <b>: Dr CHABANE SARI / Dr R. SENOUSSAOUI / Pr BENAMEUR / Pr N. ADJEROUD</b></p>
+
+
                 <p>1- Y-at-il une indication des AOD chez le Coronarien ?
                   <span class="align-right">Pr BOUKERCHE</span>
                 </p>
@@ -519,43 +620,181 @@
                   <br>&nbsp;&nbsp;&nbsp;- Stents: nouvelle génération.
                   <span class="align-right">Pr BOUKHELOUA</span>
                 </p>
-                <p>4- Viabilité Myocardiaque IRM vs STRESS.
-                  <span class="align-right">Dr Kara A / Dr Soufi</span>
+                <p>4- La Revascularisation des Lésions multiples dans les SCA.
+                  <span class="align-right">Pr GHALMI</span>
                 </p>
-                <p>5- Recommendations ESC 2023.
-                  <span class="align-right">Pr HAMMAMI</span>
-                </p>
-                <p>6- Evaluation du risque cariovasculaire.
+                <p>5- L’évaluation du risque cardiovasculaire chez les diabétiques recommandations 2023
                   <span class="align-right">Pr BENATTA</span>
                 </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>15h15</time></div>
+              <div class="col-md-2"><time>16h45</time></div>
               <div class="col-md-10">
                 <h4>SESSION ECHOCARDIOGRAPHIE</h4>
-                <p>1- Apport de l'ETO 3D dans la Cardiologie Structurelle KLOCKNER (Paris).
-                  <span class="align-right">Dr Martin</span>
+                <p><u>Modérateurs</u>: <b>Dr A.DAIB / Pr N. HAMMOUDI / Dr M . KARA MOSTEFA /Pr A. ZIDI</b></p>
+
+                <p>1- Apport de l'ETO 3D dans la Cardiologie Structurelle.
+                  <span class="align-right">Dr M KLOECKNER</span>
                 </p>
-                <p>2- Imagerie Multimodale dans l'Endocardite Infectieuse.
-                  <span class="align-right">Pr Hammoudi</span>
+                <p>2- Imagerie Multimodale l’IM Ischémique.
+                  <span class="align-right">Pr HAMMOUDI</span>
                 </p>
                 <p>3- Comment j'évalue la Cardiotoxicité des Anthracyclines.
-                  <span class="align-right">Pr Laaredj</span>
+                  <span class="align-right">Pr LAREDJ</span>
                 </p>
-                <p>4- Quoi de neuf dans les cardiomyopathies en 2023.
-                  <span class="align-right">Dr Bououdina</span>
+                <p>4- Quoi de neuf dans les cardiomyopathies.
+                  <span class="align-right">Dr BOUDOUINA</span>
+                </p>
+                <p>5- CAS CLINIQUES SUR ECHOPAC.
                 </p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>16h00</time></div>
+              <div class="col-md-2"><time>17h30</time></div>
               <div class="col-md-10">
-                <h4>Clôture</h4>
+                <h4>SYMPOSIUM SANOFI - LA CARDIOMYOPATHIE HYPERTROPHIQUE- MALADIE DE FABRY<span class="align-right">Dr M. KARA MOSTEFA</span></h4>
               </div>
             </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>18h00</time></div>
+              <div class="col-md-10">
+                <h4>Clôture</h4>
+                <p>REMISE DES PRIX Pr M KACET / Pr KARA MOSTEFA SAID / Dr MOHAMMEDI / Dr NEBIA-KAR / Dr GHANNEM</p>
+              </div>
+            </div>
+          </div>
+          <End Programme Day 2>
+        </div-->
+
+
+        <!-- ======= Programme 2024 Section ======= -->
+        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Programme Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>14h00</time--></div>
+              <div class="col-md-10">
+                <h4>Inscription et accueil des participants</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>14h30 – 15h45</time--></div>
+              <div class="col-md-10">
+                <h4>Les Ateliers Pratiques</h4>
+                <p><u>Salle 1</u>: Echocardiographie 2D / 3D, Stations Echopac
+                  <span class="align-right">Pr HAMMOUDI / Dr DAIB / Dr Kara M / Dr BOUOUDINA / Pr Essmalou</span>
+                </p>
+                <p><u>Salle 2</u>: Cardiologie du Sport</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>15h45 – 16h00</time--></div>
+              <div class="col-md-10">
+                <h4>Pause-Café / Visite des stands</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>16h00 – 16h20</time--></div>
+              <div class="col-md-10">
+                <h4>Symposium</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>16h15 – 16h30</time--></div>
+              <div class="col-md-10">
+                <h4>Inauguration du Congrès</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>16h30 – 18h00</time--></div>
+              <div class="col-md-10">
+                <h4>Session 1 : Pathologie Aortique</h4>
+                <p><u>16h30 – 16h45</u>: Anatomie de l’Orifice Aortique - <b>Dr KARA Meriem</b></p>
+                <p><u>16h45 – 17h00</u>: Apport de l’ETO 3D dans l’IAO : Faisabilité de la Plastie Aortique - <b>Pr JL Vanoverschelde</b></p>
+                <p><u>17h00 – 17h15</u>: Le Rétrécissement Aortique, les différents Aspects cliniques - <b>Dr Daib</b></p>
+                <p><u>17h15 – 17h30</u>: Imagerie Pré-TAVI - <b>Dr M KLOCKNER</b></p>
+                <p><u>17h30 – 17h45</u>: Le TAVI : Indications actuelles et Perspectives - <b>Dr H Benameur</b></p>
+                <p><u>17h45 – 18h00</u>: Imagerie multimodale dans le suivi du TAVI - <b>Pr JL Vanoverschelde</b></p>
+                <p><u>18h15 – 18h35</u>: Les Valvulopathies : 40 ans d’évolution - <b>Pr Roudaut</b></p>
+                <p><u>18h35 – 19h00</u>: Symposium</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>20h30</time--></div>
+              <div class="col-md-10">
+                <h4>Dîner</h4>
+              </div>
+            </div>
+          </div>
+          <!-- End Programme Day 1 -->
+
+          <!-- Programme Day 2 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>09h00 – 10h30</time--></div>
+              <div class="col-md-10">
+                <h4>Session 2 : Coronaires</h4>
+                <p><u>09h00 – 09h15</u>: Les Nouvelle Recommandations SCC - <b>Pr Boukerche</b></p>
+                <p><u>09h15 – 09h30</u>: Place des bétabloquants après Revascularisation - <b>Pr Boukhaloua</b></p>
+                <p><u>09h30 – 09h45</u>: Apport du scanner de Perfusion dans l’évaluation des lésions Coronaires - <b>Dr Senoussaoui</b></p>
+                <p><u>09h45 – 10h00</u>: Les lésions Coronaires du Sportif - <b>Pr Ghanem</b></p>
+                <p><u>10h00 – 10h15</u>: Hypertrophie physiologique ou Pathologique - Apport de l’IRM - <b>Dr Kara A</b></p>
+                <p><u>10h15 – 10h35</u>: Symposium</p>
+                <p><u>10h35 – 11h00</u>: Pause-café / Visite des stands</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>11h00 – 12h30</time--></div>
+              <div class="col-md-10">
+                <h4>Session 3 : Insuffisance Cardiaque</h4>
+                <p><u>11h00 – 11h15</u>: I Cardiaque à FE préservée - <b>Pr S Abdeslam</b></p>
+                <p><u>11h15 – 11h30</u>: Les Cardiomyopathies restrictives - <b>Pr Mohty</b></p>
+                <p><u>11h30 – 11h45</u>: La maladie de Fabry - <b>Dr Kara Meriem</b></p>
+                <p><u>11h45 – 12h00</u>: La DVG post-chimiothérapie en pratique - <b>Pr Djermane</b></p>
+                <p><u>12h00 – 12h30</u>: Symposium</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>12h30 – 14h00</time--></div>
+              <div class="col-md-10">
+                <h4>Déjeuner</h4>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>14h00 – 15h30</time--></div>
+              <div class="col-md-10">
+                <h4>Session 4 : Imagerie Cardiaque</h4>
+                <p><u>14h00 – 14h15</u>: Echographie de Stress, nouvelles techniques - <b>Dr Daib</b></p>
+                <p><u>14h15 – 14h30</u>: Imagerie Cardiaque 3D</p>
+                <p><u>14h30 – 14h45</u>: La TEP en Cardiologie - <b>Pr Roudaut</b></p>
+                <p><u>14h45 – 15h00</u>: Les Indications du scanner cardiaque</p>
+                <p><u>15h00 – 15h30</u>: Symposium</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><!--time>15h30 – 16h00</time--></div>
+              <div class="col-md-10">
+                <h4>Clôture du Congrès</h4>
+              </div>
+            </div>
+
           </div>
           <!-- End Programme Day 2 -->
         </div>
@@ -578,66 +817,41 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
+                <img src="assets/img/team-2024/DAIB.jpg" class="testimonial-img" alt="">
+                <h3>DAIB ABDELLAH</h3>
+                <h4>3eme vice président</h4>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
+                <img src="assets/img/team-2024/BENABDELLAH.jpg" class="testimonial-img" alt="">
+                <h3>BENABDELLAH CHAOUKI</h3>
+                <h4>Tresorier adjoint</h4>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
+                <img src="assets/img/team-2024/SARI.jpg" class="testimonial-img" alt="">
+                <h3>SARI Chaabane</h3>
+                <h4>Membre</h4>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
+                <img src="assets/img/team-2024/bensalah.jpg" class="testimonial-img" alt="">
+                <h3>BENSALAH KADOUR</h3>
+                <h4>1er vice président</h4>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
+                <img src="assets/img/team/doctors.jpg" class="testimonial-img" alt="">
+                <h3>SENOUSSAOUI RYADH</h3>
+                <h4>Membre</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -647,178 +861,6 @@
 
       </div>
     </section><!-- End Testimonials Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <h3>Consultez notre <span>Portfolio</span></h3>
-          <p>Aperçu des points qui vont être présent dans notre 20ème Congrès International</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-sess">Sessions</li>
-              <li data-filter=".filter-symp">Symposiums</li>
-              <li data-filter=".filter-resto">Restauration</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>14h30 - 15h00</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>15h00 - 15h30</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-resto">
-            <img src="assets/img/portfolio/cafe.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pause café, 15h50 - 16h10</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>16h30 - 18h00</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-symp">
-            <img src="assets/img/portfolio/Symposiums/Symposiums-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>18h00 - 18h30</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-resto">
-            <img src="assets/img/portfolio/diner.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Diner Gala, 19h</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>08h30 - 10h00</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-symp">
-            <img src="assets/img/portfolio/Symposiums/Symposiums-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>10h30 - 10h50</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>10h50 - 12h00</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-resto">
-            <img src="assets/img/portfolio/cafe.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pause café, 12h00 - 12h15</h4>
-              <p>Jeudi 30 Novembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-symp">
-            <img src="assets/img/portfolio/Symposiums/Symposiums-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>12h15 - 12h45</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>12h45-13h00</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-symp">
-            <img src="assets/img/portfolio/Symposiums/Symposiums-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>13h00-13h15</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-symp">
-            <img src="assets/img/portfolio/Symposiums/Symposiums-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>13h15-13h30</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>13h30-13h45</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-resto">
-            <img src="assets/img/portfolio/dejauner.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pause dejauner</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>14h30-15h15</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sess">
-            <img src="assets/img/portfolio/Sessions/Session-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>15h15-16h00</h4>
-              <p>Vendredi 01 Décembre 2023</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -835,7 +877,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/doctor_men.png" class="img-fluid" alt="">
+                <img src="assets/img/team-2024/abbou.jpg" class="img-fluid" alt="Dr Abbou Cardiologue">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -853,7 +895,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/doctor_women.png" class="img-fluid" alt="">
+                <img src="assets/img/team-2024/DR-Z-KARA-NEBIA.jpg" class="img-fluid" alt="Dr KARA NEBIA Cardiologue">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -871,7 +913,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/doctor_men.png" class="img-fluid" alt="">
+                <img src="assets/img/team-2024/MOHAMMEDI.jpg" class="img-fluid" alt="Dr MOHAMMEDI Cardiologue">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -889,7 +931,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/doctor_men.png" class="img-fluid" alt="">
+                <img src="assets/img/team-2024/NASRI.jpg" class="img-fluid" alt="Dr NASRI Cardiologue">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -909,6 +951,40 @@
       </div>
     </section><!-- End Team Section -->
 
+    <!-- ======= Venue Section ======= -->
+    <section id="venue">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Hommage</h2>
+        </div>
+
+        <div class="row g-0">
+          <div class="col-lg-6 hommage">
+            <img src="assets/img/team/PR-Kara.jpg">
+          </div>
+
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8 position-relative">
+                <h3>Pr KARA Mostefa Said</h3>
+                <p>Un grand monsieur de la cardiologie nous a quitté ... <br>un homme remarquable, dynamique, souriant, et toujours dévoué aux événements scientifiques. Depuis ses débuts au CHU d'Oran, et même après son départ vers sa clinique privée, il n'a jamais cessé de travailler pour le bien de ses patients, en particulier dans l'ouest algérien.</p><br>
+
+                <p>Le Pr Kara nous a quittés bien trop tôt, laissant un vide immense dans le domaine de la santé, et plus particulièrement au sein de la communauté de la cardiologie algérienne. Son sourire et son optimisme vont nous manquer à tous.</p><br>
+                <p>On demande à tous ceux qui l'ont connu d'avoir une pieuse pensée en sa mémoire.</p><br>
+
+                <p style="text-align: center;">Que Dieu ait son âme, cher maître.</p><br>
+                <p style="text-align: center;">ربي يرحمه ويغفر له و يسكنه فسيح جناته</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End Venue Section -->
+
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
@@ -917,6 +993,7 @@
           <h2>Frais</h2>
           <h3>Les frais d'inscription du <span>Congrès</span></h3>
           <p>L'inscription pour notre congrès de 2 jours est à 3000 DA et comprend tous les frais.</p>
+          <p>Note : vos conjoints et vos invités ne sont pas inclus dans la prise en charge.</p>
         </div>
 
         <div class="row">
@@ -930,8 +1007,8 @@
               <h3>Standard</h3>
               <h4>3.000<span> DA</span></h4>
               <ul>
-                <li>8 Conférences</li>
-                <li>4 Symposiums</li>
+                <li>9 Conférences</li>
+                <li>5 Symposiums</li>
                 <li>Deux pauses café</li>
                 <li>Déjeuners</li>
                 <li>Dîners de gala</li>
@@ -950,6 +1027,213 @@
 
       </div>
     </section><!-- End Pricing Section -->
+
+    <!-- ======= Sponsors Section ======= -->
+    <section id="sponsors" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>SPONSORS</h2>
+          <h3>Les sponsors de notre <span>Congrès</span></h3>
+          <p>Nous tenons à remercier chaleureusement nos sponsors. Nous sommes reconnaissants de leur confiance et de leur engagement.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-platine">Platinum</li>
+              <li data-filter=".filter-gold">Golden</li>
+              <li data-filter=".filter-silver">Silver</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="row">
+            <div class="col-lg-1 col-md-2 portfolio-item filter-platine">
+              <img src="assets/img/sponsors/sanofi.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Sanofi</h4>
+                <p>Platinum sponsor</p>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-gold">
+              <img src="assets/img/sponsors/servier.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Servier</h4>
+                <p>Golden sponsor</p>
+              </div>
+            </div>
+
+            <!--div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/Novartis.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Novartis</h4>
+              </div>
+            </div-->
+
+            <!--div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/bouchara.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bouchara</h4>
+              </div>
+            </div-->
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/astrazeneca.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>astrazeneca</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/hikma.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>hikma</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/airp.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Abdi Brahim</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/biopharm.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>biopharm</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/boehringer.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>boehringer</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/organon.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Organon</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/dar-dawa.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Dar Dawa</h4>
+              </div>
+            </div>
+
+            <!--div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/el-kendi.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>el-kendi</h4>
+              </div>
+            </div-->
+
+            <!--div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/frater-razes.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>frater-razes</h4>
+              </div>
+            </div-->
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/inpha-medis.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Inpha-medis</h4>
+              </div>
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="col-lg-2 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/SODIMMED.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>SODIMMED</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/pfizer.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>PFIZER</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/ge.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Général électrique</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/canon-medical.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Canon</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/imc.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>IMC</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/vicralys.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>VICRALYS</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/omnipaque.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>OMNIPAQUE</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/meril.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>MERIL</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/dmcm.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>DM-CM</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-1 col-md-2 portfolio-item filter-silver">
+              <img src="assets/img/sponsors/beker.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>beker</h4>
+              </div>
+            </div>
+          </div>  
+
+        </div>
+
+        <div class="row portfolio-container" style="margin-top: -40px;" data-aos="fade-up" data-aos-delay="200">
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Sponsors Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -1057,7 +1341,8 @@
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
               <h3>Appelez-nous</h3>
-              <p>+213 770 504 382</p>
+              <p>+213 793 015 593</p>
+              <!--p>+213 770 504 382</p-->
             </div>
           </div>
 
@@ -1070,28 +1355,37 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+            <form action="save_cn_message.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="col form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
+                    </div>
                 </div>
-                <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
                 </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Chargement</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Votre message a été envoyé. Merci !</div>
-              </div>
-              <div class="text-center"><button type="submit">Envoyer le message</button></div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="file" name="file" id="file" accept=".pdf, .doc, .docx, .xls, .xlsx, .ppt, pptx">
+                    <span style="font-size: x-small;">Seulement les fichier <i>PDF, Word, Excel et PowerPoint</i> sont autorisé de taille <b>20 Mo max</b>.</span>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Chargement</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Votre message a été envoyé. Merci !</div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="submit-button">Envoyer le message</button>
+                </div>
+
+                <div id="form-messages"></div>
             </form>
+
 
           </div>
 
@@ -1304,9 +1598,9 @@
     const textElement = document.querySelector(".text-animation");
 
     const texts = [
-      "le 30 novembre et 1 décembre 2023",
-      "à l'Hôtel Bay Oran",
-      "20ème congrés International",
+      "le 28 et le 29 novembre 2024",
+      "à l'Hôtel AZ grand Oran",
+      "21ème congrés International",
     ];
 
     let currentIndex = 0;
@@ -1366,6 +1660,49 @@
           });
         });
     }
+  </script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const form = document.querySelector(".php-email-form");
+          const formMessages = document.querySelector("#form-messages");
+
+          form.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              // Afficher le message de chargement
+              formMessages.innerHTML = '<div class="loading">Chargement...</div>';
+
+              // Envoyer le formulaire via AJAX
+              fetch("save_cn_message.php", {
+                  method: "POST",
+                  body: new FormData(form),
+              })
+                  .then((response) => response.json())
+                  .then((data) => {
+                      if (data.status === "success") {
+                          // Afficher une alerte de succès
+                          Swal.fire({
+                              title: "Succès",
+                              text: data.message,
+                              icon: "success",
+                          });
+
+                          // Réinitialiser le formulaire
+                          form.reset();
+                      } else {
+                          // Afficher une alerte d'erreur
+                          Swal.fire({
+                              title: "Erreur",
+                              text: data.message,
+                              icon: "error",
+                          });
+                      }
+                  })
+                  .catch((error) => {
+                      console.error("Erreur lors de la soumission du formulaire:", error);
+                  });
+          });
+      });
   </script>
 
 
